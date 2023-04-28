@@ -12,7 +12,7 @@ def root():
 @app.post("/end_point1")
 async def end_point1(request: Request):
     try:
-        list_items = await request.json()
+        list_items = await request.text()
        
         
         print(list_items )
