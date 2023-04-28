@@ -13,7 +13,9 @@ def root():
 async def end_point1(request: Request):
     try:
         list_items = await request.body()
-       
+        body_str = list_items.decode('utf-8')
+        json_data = json.loads(body_str)
+        print(json_data)
         
         print(list_items )
         print(type(list_items))
