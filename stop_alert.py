@@ -13,26 +13,26 @@ def root():
 async def end_point1(request: Request):
     try:
         list_items = await request.json()
-        data = object(list_items)
-
-        for i in range(len(list_items)):
        
-           header1 = {"Content-Type" :"application/json" ,
         
-            "Authorization" : "Bearer a44f5d93-4f06-4d6f-873b-e96d7945e48f" 
-         
-                }
-        data = data = {
-                "userId":str(list_items[i]['id']),
-                "eventName" : "stop_alert_sent",
-                "eventData":
-                {
-                }
-                }
-        response = requests.post('https://api.webengage.com/v1/accounts/~2024b707/events' ,headers=header1,  json=data)
-            # print(i)
-        print(list_items[i]['id'])
-        print(response)
+        print(list_items )
+        print(type(list_items))
+        #for obj in list_items:
+            # header1 = {"Content-Type" :"application/json" ,
+            #  "Authorization" : "Bearer a44f5d93-4f06-4d6f-873b-e96d7945e48f" 
+            #     }
+            # data = {
+            #     "userId":obj["id"],
+            #     "eventName" : "stop_alert_sent",
+            #     "eventData":
+            #     {
+            #     }
+            #     }
+            # response = requests.post('https://api.webengage.com/v1/accounts/~2024b707/events' ,headers=header1,  json=data)
+            
+            #print(i)
+            #print(obj["id"])
+            # print(response)
 
         # id_list = []
         # for id in list_items:
