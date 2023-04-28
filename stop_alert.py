@@ -14,11 +14,11 @@ async def end_point1(request: Request):
     try:
         list_items = await request.body()
         body_str = list_items.decode('utf-8')
-        json_data = json.loads(body_str)
-        print(json_data)
+        #json_data = json.loads(body_str)
+        print(body_str)
         
-        print(list_items )
-        print(type(list_items))
+        #print(list_items )
+        #print(type(list_items))
         #for obj in list_items:
             # header1 = {"Content-Type" :"application/json" ,
             #  "Authorization" : "Bearer a44f5d93-4f06-4d6f-873b-e96d7945e48f" 
