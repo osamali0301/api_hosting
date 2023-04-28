@@ -44,6 +44,3 @@ async def end_point1(request: Request):
 
     except Exception as ep1_exc:
         print("Exception: " + str(ep1_exc))
-
-
-
