@@ -15,7 +15,7 @@ async def end_point1(request: Request):
         list_items = await request.body()
         body_str = list_items.decode('utf-8')
         #json_data = json.loads(body_str)
-        print(list_items)
+        print(body_str)
         
         #print(list_items )
         #print(type(list_items))
